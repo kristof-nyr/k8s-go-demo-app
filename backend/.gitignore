@@ -1,0 +1,13 @@
+.vscode
+utils/kubeconfig
+
+*.exe
+.idea
+/logs/*.log
+/cache/*
+DocHub
+*.conf
+*.lock
+__pycache__
+*.go.un~
+*.un~
