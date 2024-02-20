@@ -1,7 +1,7 @@
 package k8s
 
 import (
-	"path/filepath"
+	"os"
 
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
@@ -9,9 +9,8 @@ import (
 )
 
 func KubernetesAuth() kubernetes.Clientset {
-
 	// creates kubeconfig object
-	kubeconfig := filepath.Join("utils", "kubeconfig")
+	kubeconfig := os.Getenv("KUBECONFIG")
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 
 	if err != nil {
@@ -28,9 +27,7 @@ func KubernetesAuth() kubernetes.Clientset {
 }
 
 func KubeConfig() *rest.Config {
-
-	// creates kubeconfig object
-	kubeconfig := filepath.Join("utils", "kubeconfig")
+	kubeconfig := os.Getenv("KUBECONFIG")
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 
 	if err != nil {

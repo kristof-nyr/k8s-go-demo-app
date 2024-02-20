@@ -1,7 +1,7 @@
 package k8s
 
 import (
-	"path/filepath"
+	"os"
 
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/metrics/pkg/client/clientset/versioned"
@@ -10,7 +10,7 @@ import (
 func MetricsAuth() versioned.Clientset {
 
 	// creates kubeconfig object
-	kubeconfig := filepath.Join("utils", "kubeconfig")
+	kubeconfig := os.Getenv("KUBECONFIG")
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 
 	if err != nil {
