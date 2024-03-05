@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: k8s-go-controller
+    role: backend
+  name: k8s-go-controller
+  namespace: k8s-go-controller
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-go-controller
+      role: backend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s-go-controller
+        role: backend
+    spec:
+      serviceAccountName: go-controller-sa
+      containers:
+      - image: kristofnyari297/go-k8s-controller:v1.0
+        name: go-k8s-controller
+        resources: {}
+status: {}
