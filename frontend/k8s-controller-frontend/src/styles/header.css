@@ -1,0 +1,22 @@
+.component-header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+.component-header-ul {
+    list-style-type: none;
+    margin: 0 2rem;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row;
+}
+
+.component-header-nav-a {
+    padding: 1em;
+    text-decoration: none;
+    color: #e0e0e0;
+}
