@@ -13,7 +13,7 @@ const MetricsDashboard = () => {
   const [metricsData, setMetricsData] = useState({});
   const [metricsDataPods, setMetricsDataPods] = useState({});
   const namespace = "k8s-go-controller";
-  
+
   useEffect(() => {
     getKubernetesNodeMetrics().then((data) => {
       setMetricsData(data);

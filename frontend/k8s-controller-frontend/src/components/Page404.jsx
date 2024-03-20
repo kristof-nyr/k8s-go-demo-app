@@ -1,14 +1,14 @@
-import React from 'react';
-import Header from './Header';
+import React from "react";
+import Header from "./Header";
 
 const Page404 = () => {
-    return (
-        <div>
-            <Header />
-            <h1>404 - Page Not Found</h1>
-            <p>The page you are looking for does not exist.</p>
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      <h1>404 - Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+    </div>
+  );
 };
 
 export default Page404;
