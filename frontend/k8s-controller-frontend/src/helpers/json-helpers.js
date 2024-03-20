@@ -16,4 +16,22 @@ const transformKubernetesNodeMetrics = (data) => {
   return metricsObject;
 };
 
-export { transformKubernetesNodeMetrics };
+const transformKubernetesPodMetrics = (data) => {
+  let metricsObject = [];
+  // Handle pre-hyrdated content rendering
+  // The case when the raw html is first rendered, afterwards the page will get hydrated with by JS
+  if (data.items) {
+    data.items.forEach((metricItem) => {
+      metricsObject.push({
+        podName: metricItem.metadata.name,
+        containers: metricItem.containers[0].name,
+        cpuUsage: metricItem.containers[0].usage.cpu,
+        memoryUsage: metricItem.containers[0].usage.memory,
+      });
+    });
+  }
+  console.log(metricsObject);
+  return metricsObject;
+};
+
+export { transformKubernetesNodeMetrics, transformKubernetesPodMetrics };

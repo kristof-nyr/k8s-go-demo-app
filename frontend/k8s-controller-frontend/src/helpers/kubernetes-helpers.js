@@ -67,7 +67,7 @@ const getKubernetesNodeMetrics = async () => {
  */
 const getKubernetesPodMetrics = async (namespace) => {
   const response = await axios.get(
-    `${BACKEND_URL}/api/metrics.k8s.io/v1beta1/namepsaces/${namespace}/pods`,
+    `${BACKEND_URL}/api/metrics.k8s.io/v1beta1/namespaces/${namespace}/pods`,
   );
   return response.data;
 };

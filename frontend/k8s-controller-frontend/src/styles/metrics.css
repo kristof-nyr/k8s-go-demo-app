@@ -1,15 +1,17 @@
 .component-metrics-dashboard-container {
-  background-color: #2f2f2f;
-  width: 100vw;
+  background-color: #585858;
+  width: calc(100vw - 10px);
   height: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  border: 5px solid #e0e0e0;
 }
 
 .component-metrics-dashboard-title {
-  font-size: 2rem;
+  padding: 5vh 0;
+  font-size: 3rem;
   margin: 2rem;
 }
 
@@ -19,6 +21,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid #e0e0e0;
+  line-height: 2rem;
 }
 
 .component-metrics-dashboard-metrics-table td {

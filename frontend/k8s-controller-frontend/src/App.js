@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       <Header />
       <div>
-        <p>Click on the links above to see the Kubernetes resources.</p>
       </div>
       <div>
         <MetricsDashboard />
