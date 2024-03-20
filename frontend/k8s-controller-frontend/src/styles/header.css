@@ -1,22 +1,33 @@
 .component-header {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
 }
 
 .component-header-ul {
-    list-style-type: none;
-    margin: 0 2rem;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-flow: row;
+  list-style-type: none;
+  margin: 0 2rem;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
 }
 
 .component-header-nav-a {
-    padding: 1em;
-    text-decoration: none;
-    color: #e0e0e0;
+  padding: 1em;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.25rem;
+  border-right: 1px solid #e0e0e0;
+}
+
+.component-header-nav-a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.no-border {
+  border: none;
 }

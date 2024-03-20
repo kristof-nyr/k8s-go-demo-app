@@ -1,5 +1,5 @@
-.component-metrics-dashboard-container {
-  background-color: #5a5d5a;
+.component-pods-dashboard-container {
+  background-color: #5b5a5d;
   width: calc(100vw - 10px);
   height: auto;
   display: flex;
@@ -9,13 +9,13 @@
   border: 5px solid #e0e0e0;
 }
 
-.component-metrics-dashboard-title {
-  padding: 5vh 0;
+.component-pods-dashboard-title {
+  padding: 2vh 0;
   font-size: 3rem;
   margin: 2rem;
 }
 
-.component-metrics-dashboard-metrics-table {
+.component-pods-dashboard-table {
   width: 100%;
   height: auto;
   justify-content: center;
@@ -24,7 +24,7 @@
   line-height: 2rem;
 }
 
-.component-metrics-dashboard-metrics-table td {
+.component-pods-dashboard-table td {
   border: 1px solid #e0e0e0;
   border-collapse: collapse;
 }

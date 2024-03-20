@@ -1,4 +1,4 @@
-.component-metrics-dashboard-container {
+.component-namespaces-dashboard-container {
   background-color: #5a5d5a;
   width: calc(100vw - 10px);
   height: auto;
@@ -9,13 +9,13 @@
   border: 5px solid #e0e0e0;
 }
 
-.component-metrics-dashboard-title {
-  padding: 5vh 0;
+.component-namespaces-dashboard-title {
+  padding: 2vh 0;
   font-size: 3rem;
   margin: 2rem;
 }
 
-.component-metrics-dashboard-metrics-table {
+.component-namespaces-dashboard-table {
   width: 100%;
   height: auto;
   justify-content: center;
@@ -24,7 +24,7 @@
   line-height: 2rem;
 }
 
-.component-metrics-dashboard-metrics-table td {
+.component-namespaces-dashboard-table td {
   border: 1px solid #e0e0e0;
   border-collapse: collapse;
 }
