@@ -8,6 +8,7 @@ rules:
   - ""
   resources:
   - nodes
+  - namespaces
   verbs:
   - list
   - get

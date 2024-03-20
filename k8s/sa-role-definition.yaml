@@ -10,7 +10,6 @@ rules:
   resources:
   - pods
   - services
-  - namespaces
   verbs:
   - list
   - get
