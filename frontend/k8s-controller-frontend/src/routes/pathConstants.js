@@ -1,9 +1,10 @@
 const PathConstants = {
-    HOME: "/",
-    PODS: "pods",
-    SERVICES: "services",
-    DEPLOYMENTS: "deployments",
-    NAMESPACES: "namespaces",
-}
+  HOME: "/",
+  PODS: "pods",
+  POD_INFO: "/pods/:podName",
+  SERVICES: "services",
+  DEPLOYMENTS: "deployments",
+  NAMESPACES: "namespaces",
+};
 
-export default PathConstants
+export default PathConstants;

@@ -23,7 +23,7 @@ const getKubernetesResources = async (resource) => {
 
 const getKubernetesNamespacedResources = async (resource, namespace) => {
   const response = await axios.get(
-    `${BACKEND_URL}/api/v1/namespaces//${namespace}/${resource}`,
+    `${BACKEND_URL}/api/v1/namespaces/${namespace}/${resource}`,
   );
   return response.data;
 };
