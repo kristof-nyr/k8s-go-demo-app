@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/header.css"
+import "../styles/header.css";
 import HeaderLink from "./HeaderLink";
 
 const headerEntries = {
@@ -18,22 +18,26 @@ const headerEntries = {
   namespaces: {
     name: "Namespaces",
     url: "/namespaces",
-  }
+  },
 };
 
 const Header = () => {
   return (
     <header className="component-header">
       <h1>
-        <a href="/" className="component-header-nav-a">
-            Kubernetes Dashboard
+        <a href="/" className="component-header-nav-a no-border">
+          Kubernetes Dashboard
         </a>
       </h1>
       <nav>
         <ul className="component-header-ul">
           {Object.keys(headerEntries).map((key) => {
             return (
-              <HeaderLink key={headerEntries[key].name} text={headerEntries[key].name} url={headerEntries[key].url} />
+              <HeaderLink
+                key={headerEntries[key].name}
+                text={headerEntries[key].name}
+                url={headerEntries[key].url}
+              />
             );
           })}
         </ul>
