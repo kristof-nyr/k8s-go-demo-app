@@ -1,45 +1,55 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/header.css";
-import HeaderLink from "./HeaderLink";
-
-const headerEntries = {
-  pods: {
-    name: "Pods",
-    url: "/pods",
-  },
-  services: {
-    name: "Services",
-    url: "/services",
-  },
-  deployments: {
-    name: "Deployments",
-    url: "/deployments",
-  },
-  namespaces: {
-    name: "Namespaces",
-    url: "/namespaces",
-  },
-};
+import PathConstants from "../routes/pathConstants";
 
 const Header = () => {
   return (
     <header className="component-header">
       <h1>
-        <a href="/" className="component-header-nav-a no-border">
+        <Link
+          to={PathConstants.HOME}
+          className="component-header-nav-a no-border"
+        >
           Kubernetes Dashboard
-        </a>
+        </Link>
       </h1>
       <nav>
         <ul className="component-header-ul">
-          {Object.keys(headerEntries).map((key) => {
-            return (
-              <HeaderLink
-                key={headerEntries[key].name}
-                text={headerEntries[key].name}
-                url={headerEntries[key].url}
-              />
-            );
-          })}
+          <li className="component-header-nav-li" key={PathConstants.PODS}>
+            <Link
+              className="component-header-nav-a"
+              to={PathConstants.PODS}
+              title="Pods"
+            >Pods</Link>
+          </li>
+          <li className="component-header-nav-li" key={PathConstants.SERVICES}>
+            <Link
+              className="component-header-nav-a"
+              to={PathConstants.SERVICES}
+              title="Services"
+            >Services</Link>
+          </li>
+          <li
+            className="component-header-nav-li"
+            key={PathConstants.DEPLOYMENTS}
+          >
+            <Link
+              className="component-header-nav-a"
+              to={PathConstants.DEPLOYMENTS}
+              title="Deployments"
+            >Deployments</Link>
+          </li>
+          <li
+            className="component-header-nav-li"
+            key={PathConstants.NAMESPACES}
+          >
+            <Link
+              className="component-header-nav-a"
+              to={PathConstants.NAMESPACES}
+              title="Namespaces"
+            >Namespaces</Link>
+          </li>
         </ul>
       </nav>
     </header>
