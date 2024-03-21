@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: k8s-controller-frontend
+    role: frontend
+  name: k8s-controller-frontend
+  namespace: k8s-go-controller
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-controller-frontend
+      role: frontend
+  strategy: 
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s-controller-frontend
+        role: frontend
+    spec:
+      serviceAccountName: go-controller-sa
+      containers:
+      - image: kristofnyari297/k8s-controller-frontend:v1.0
+        name: k8s-controller-frontend
+        ports:
+        - containerPort: 80
+        env:
+        - name: REACT_APP_BACKEND_URL
+          value: k8s-endpoint-svc.k8s-go-controller.svc.cluster.local
+        livenessProbe:
+          httpGet:
+            path: /                # The path to check for the liveness probe
+            port: 80               # The port to check on
+          initialDelaySeconds: 15  # Wait this many seconds before starting the probe
+          periodSeconds: 10        # Check the probe every 10 seconds
+        readinessProbe:
+          httpGet:
+            path: /                # The path to check for the readiness probe
+            port: 80               # The port to check on
+          initialDelaySeconds: 5   # Wait this many seconds before starting the probe
+          periodSeconds: 5  
+        resources: 
+          limits: 
+            memory: "256Mi"
+            cpu: "500m"
+          requests: 
+            memory: "128Mi"
+            cpu: "250m"
+          
+        
+status: {}

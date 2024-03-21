@@ -13,7 +13,8 @@ spec:
     matchLabels:
       app: k8s-go-controller
       role: backend
-  strategy: {}
+  strategy: 
+    type: RollingUpdate
   template:
     metadata:
       creationTimestamp: null
@@ -25,5 +26,25 @@ spec:
       containers:
       - image: kristofnyari297/go-k8s-controller:v1.0
         name: go-k8s-controller
-        resources: {}
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/v1/nodes
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5  
+        resources: 
+          limits: 
+            memory: "256Mi"
+            cpu: "500m"
+          requests: 
+            memory: "128Mi"
+            cpu: "250m"
 status: {}
