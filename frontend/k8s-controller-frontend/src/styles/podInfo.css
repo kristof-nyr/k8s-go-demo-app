@@ -1,0 +1,36 @@
+.component-podinfo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.component-podinfo-title {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.component-podinfo-title span {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: rgb(185, 178, 178);
+}
+
+.component-podinfo-flexbox{
+    font-family: monospace;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 0 20em;
+}
+.component-podinfo-flexbox div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e2e2;
+}

@@ -16,6 +16,7 @@
 }
 
 .component-metrics-dashboard-metrics-table {
+  font-family: monospace;
   width: 100%;
   height: auto;
   justify-content: center;

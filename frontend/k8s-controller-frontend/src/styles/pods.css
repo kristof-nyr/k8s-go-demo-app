@@ -16,6 +16,7 @@
 }
 
 .component-pods-dashboard-table {
+  font-family: monospace;
   width: 100%;
   height: auto;
   justify-content: center;
@@ -27,4 +28,14 @@
 .component-pods-dashboard-table td {
   border: 1px solid #e0e0e0;
   border-collapse: collapse;
+}
+
+.component-pods-dashboard-pod-link{
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+.component-pods-dashboard-pod-link:hover{
+  color: #ffffff;
+  text-decoration: underline;
 }
