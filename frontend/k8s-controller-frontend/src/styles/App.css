@@ -7,3 +7,16 @@
   margin: 0;
   padding: 0;
 }
+
+.loading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 99;
+  background-color: #3b3d43;
+}
+
+.loading-div h1 {
+  font-size: 5rem;
+}

@@ -7,7 +7,7 @@ export default function Layout() {
     <>
       <Header />
       <main>
-        <Suspense fallback={<div className="loading-div">Loading...</div>}>
+        <Suspense fallback={<div className="loading-div"><h1>Loading...</h1></div>}>
           <Outlet />
         </Suspense>
       </main>
