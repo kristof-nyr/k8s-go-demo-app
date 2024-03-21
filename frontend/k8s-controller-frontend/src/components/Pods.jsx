@@ -30,8 +30,8 @@ const Pods = () => {
         <tbody>
           {transformedPods.map((pod, index) => (
             <tr key={index}>
-              <td>
-                <Link to={`${pod.name}`}>{pod.name}</Link>
+              <td >
+                <Link className="component-pods-dashboard-pod-link" to={`${pod.name}`}>{pod.name}</Link>
               </td>
               <td>{pod.namespace}</td>
               <td>{pod.labels}</td>
